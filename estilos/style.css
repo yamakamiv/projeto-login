@@ -36,8 +36,8 @@ section#login{
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    
     transform: translate(-50%, -50%);
-
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
@@ -67,7 +67,7 @@ section#login > div#formulario > p{
 div.dados{
     background-color: #5f2c82;
     margin: 5px 0px;
-    padding: 5px;
+    padding: 2px;
     height: 40px;
     width: 100%;
     border-radius: 10px;
@@ -76,27 +76,39 @@ div.dados{
 div.dados span{
     color: white;
     font-size: 1.9em;
+    width: 40px;
 }
 
 div.dados input{
     background-color: #94cfcd;
     font-size: 1em;
     height: 100%;
-    width: 185px;
-    transform: translateY(-10px);
+    width: calc(100% - 45px);
     border: none;
     border-radius: 10px;
     text-indent: 5px;
+    padding: 4px;
+    transform: translateY(-6px);
+}
+
+div.dados input:focus-within{
+    background-color: white;
 }
 
 form input#entrar{
+    display: block;
     height: 40px;
     width: 100%;
-    background-color: #53aaa7;
+    background-color: #49a09d;
     border: none;
     border-radius: 10px;
     font-size: 1em;
     color: white;
+    cursor: pointer;
+}
+
+form input#entrar:hover{
+    background-color: #2d6462;
 }
 
 form a{
@@ -104,9 +116,19 @@ form a{
     font-size: 1em;
     text-align: center;
     height: 40px;
+    width: 100%;
     margin-top: 5px;
     text-decoration: none;
     color: #2d6462;
     border: 1px solid #49a09d;
     border-radius: 10px;
+}
+
+form a:hover{
+    background-color: #6cd3cf;
+}
+
+form > a > span{
+    font-size: 0.8em;
+    transform: translateY(7px);
 }
